@@ -34,7 +34,7 @@ def recommend(movie):
 # Load movie data and similarity matrix
 movies_list = joblib.load('movies_dict.pkl')
 movies = pd.DataFrame(movies_list)
-similarity = pickle.load(open('similarity.h5','rb'))
+similarity = joblib.load('similarity.h5')
 
 # Streamlit UI
 st.header("Movie Recommender System")
