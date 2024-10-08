@@ -32,7 +32,7 @@ def recommend(movie):
     return recommended_movies, [posters.get(movie, None) for movie in recommended_movies]
 
 # Load movie data and similarity matrix
-movies_list = pickle.load(open('movies_dict.pkl', 'rb'))
+movies_list = joblib.load('movies_dict.pkl')
 movies = pd.DataFrame(movies_list)
 similarity = joblib.load('similarity.h5')
 
