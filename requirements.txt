@@ -1,5 +1,5 @@
 movieposters
-joblib
+joblib== 0.9.4
 
 
 
